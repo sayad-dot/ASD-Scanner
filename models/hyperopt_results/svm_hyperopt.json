@@ -1,0 +1,10 @@
+{
+  "model_name": "svm",
+  "best_params": {
+    "C": 2.2122392842419676,
+    "gamma": "auto",
+    "kernel": "poly"
+  },
+  "best_score": 1.0,
+  "n_trials": 20
+}

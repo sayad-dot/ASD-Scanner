@@ -1,0 +1,230 @@
+{
+  "tabnet_adult": {
+    "model_name": "tabnet",
+    "dataset_name": "adult",
+    "best_params": {
+      "n_d": 45,
+      "n_a": 41,
+      "n_steps": 9,
+      "gamma": 1.733961088937106,
+      "lambda_sparse": 1.715504529398898e-06,
+      "max_epochs": 148,
+      "batch_size": 256
+    },
+    "test_metrics": {
+      "accuracy": 0.9951456310679612,
+      "precision": 0.9903846153846154,
+      "recall": 1.0,
+      "f1": 0.9951690821256038,
+      "auc": 0.9969836930907721
+    },
+    "model_path": "models/saved_models/tabnet_adult.zip"
+  },
+  "tabnet_adolescent": {
+    "model_name": "tabnet",
+    "dataset_name": "adolescent",
+    "best_params": {
+      "n_d": 51,
+      "n_a": 25,
+      "n_steps": 5,
+      "gamma": 1.366836379624852,
+      "lambda_sparse": 4.114702517391856e-06,
+      "max_epochs": 87,
+      "batch_size": 64
+    },
+    "test_metrics": {
+      "accuracy": 0.6538461538461539,
+      "precision": 0.6428571428571429,
+      "recall": 0.6923076923076923,
+      "f1": 0.6666666666666666,
+      "auc": 0.6923076923076923
+    },
+    "model_path": "models/saved_models/tabnet_adolescent.zip"
+  },
+  "tabnet_child": {
+    "model_name": "tabnet",
+    "dataset_name": "child",
+    "best_params": {
+      "n_d": 33,
+      "n_a": 35,
+      "n_steps": 4,
+      "gamma": 1.645841475298196,
+      "lambda_sparse": 0.0002877239729127896,
+      "max_epochs": 199,
+      "batch_size": 64
+    },
+    "test_metrics": {
+      "accuracy": 0.7377049180327869,
+      "precision": 0.6590909090909091,
+      "recall": 0.9666666666666667,
+      "f1": 0.7837837837837838,
+      "auc": 0.8870967741935484
+    },
+    "model_path": "models/saved_models/tabnet_child.zip"
+  },
+  "random_forest_adult": {
+    "model_name": "random_forest",
+    "dataset_name": "adult",
+    "best_params": {
+      "n_estimators": 86,
+      "max_depth": 20,
+      "min_samples_split": 13,
+      "min_samples_leaf": 10,
+      "max_features": "sqrt"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/random_forest_adult.pkl"
+  },
+  "random_forest_adolescent": {
+    "model_name": "random_forest",
+    "dataset_name": "adolescent",
+    "best_params": {
+      "n_estimators": 216,
+      "max_depth": 18,
+      "min_samples_split": 12,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/random_forest_adolescent.pkl"
+  },
+  "random_forest_child": {
+    "model_name": "random_forest",
+    "dataset_name": "child",
+    "best_params": {
+      "n_estimators": 95,
+      "max_depth": 3,
+      "min_samples_split": 13,
+      "min_samples_leaf": 8,
+      "max_features": "sqrt"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/random_forest_child.pkl"
+  },
+  "xgboost_adult": {
+    "model_name": "xgboost",
+    "dataset_name": "adult",
+    "best_params": {
+      "n_estimators": 191,
+      "max_depth": 8,
+      "learning_rate": 0.2246328537360768,
+      "subsample": 0.8602449693860177,
+      "colsample_bytree": 0.8548273847943946
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/xgboost_adult.pkl"
+  },
+  "xgboost_adolescent": {
+    "model_name": "xgboost",
+    "dataset_name": "adolescent",
+    "best_params": {
+      "n_estimators": 93,
+      "max_depth": 4,
+      "learning_rate": 0.28225940645385716,
+      "subsample": 0.855779658837273,
+      "colsample_bytree": 0.6947158216155617
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/xgboost_adolescent.pkl"
+  },
+  "xgboost_child": {
+    "model_name": "xgboost",
+    "dataset_name": "child",
+    "best_params": {
+      "n_estimators": 53,
+      "max_depth": 7,
+      "learning_rate": 0.0779563343806307,
+      "subsample": 0.9549082668621431,
+      "colsample_bytree": 0.9626964718973879
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/xgboost_child.pkl"
+  },
+  "svm_adult": {
+    "model_name": "svm",
+    "dataset_name": "adult",
+    "best_params": {
+      "C": 11.830827632056067,
+      "gamma": "scale",
+      "kernel": "poly"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/svm_adult.pkl"
+  },
+  "svm_adolescent": {
+    "model_name": "svm",
+    "dataset_name": "adolescent",
+    "best_params": {
+      "C": 1.2891145126658603,
+      "gamma": "auto",
+      "kernel": "poly"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/svm_adolescent.pkl"
+  },
+  "svm_child": {
+    "model_name": "svm",
+    "dataset_name": "child",
+    "best_params": {
+      "C": 2.2122392842419676,
+      "gamma": "auto",
+      "kernel": "poly"
+    },
+    "test_metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auc": 1.0
+    },
+    "model_path": "models/saved_models/svm_child.pkl"
+  }
+}

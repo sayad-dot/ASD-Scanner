@@ -67,8 +67,12 @@ class XGBoostModel(BaseModel):
             'colsample_bytree': 0.8,
             'random_state': 42,
             'eval_metric': 'logloss',
-            'use_label_encoder': False
+            'enable_categorical': False  # Updated for XGBoost 3.x
         }
+        
+        # Remove deprecated parameter for XGBoost 3.x
+        if 'use_label_encoder' in kwargs:
+            kwargs.pop('use_label_encoder')
         
         params = {**default_params, **kwargs}
         self.model = xgb.XGBClassifier(**params)
@@ -76,17 +80,26 @@ class XGBoostModel(BaseModel):
     
     def fit(self, X_train: np.ndarray, y_train: np.ndarray, 
             X_val: np.ndarray = None, y_val: np.ndarray = None, **kwargs):
-        """Train XGBoost"""
+        """Train XGBoost - Compatible with XGBoost 3.x"""
         if self.model is None:
             self.build_model(input_dim=X_train.shape[1], **self.config)
         
-        fit_params = {}
+        # For XGBoost 3.x, use simple approach without early stopping complications
         if X_val is not None and y_val is not None:
-            fit_params['eval_set'] = [(X_val, y_val)]
-            fit_params['early_stopping_rounds'] = 20
-            fit_params['verbose'] = False
+            # Use eval_set for monitoring but without early stopping
+            try:
+                self.model.fit(
+                    X_train, y_train,
+                    eval_set=[(X_val, y_val)],
+                    verbose=False
+                )
+                logger.info("XGBoost trained with validation monitoring")
+            except Exception as e:
+                logger.warning(f"Validation approach failed: {e}, using simple fit")
+                self.model.fit(X_train, y_train)
+        else:
+            self.model.fit(X_train, y_train)
         
-        self.model.fit(X_train, y_train, **fit_params)
         self.is_trained = True
         logger.info("XGBoost training completed")
     
