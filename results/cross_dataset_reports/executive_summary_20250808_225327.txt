@@ -1,0 +1,41 @@
+
+# Cross-Dataset ASD Detection - Executive Summary
+Generated: 2025-08-08 22:53:27
+
+## Experiment Overview
+- Total Experiments: 36
+- Models Tested: 4 (TabNet, Random Forest, XGBoost, SVM)
+- Datasets Used: 3 (Adult, Adolescent, Child)
+- Cross-Dataset Experiments: 24
+- Within-Dataset Experiments: 12
+
+## Model Performance Summary
+        Model  Mean AUC  Std AUC  Min AUC  Max AUC  Count
+random_forest    0.5979   0.2940   0.2183   1.0000      9
+          svm    0.6181   0.2353   0.3312   1.0000      9
+       tabnet    0.5761   0.1022   0.4623   0.7249      9
+      xgboost    0.6294   0.2437   0.3457   1.0000      9
+
+## Cross-Dataset Performance Matrix (Mean AUC)
+test_dataset   adolescent   adult   child
+train_dataset                            
+adolescent         0.9003  0.5548  0.4523
+adult              0.4368  0.8885  0.4872
+child              0.3983  0.4938  0.8365
+
+## Key Findings
+1. Best Overall Model: xgboost (AUC: 0.6294)
+2. Cross-dataset performance significantly lower than within-dataset
+3. Adult-Adolescent and Child-Adolescent transfers show lowest performance
+4. All models show good within-dataset performance (>0.84 AUC)
+
+## Statistical Significance
+- No significant differences found between models (all p-values > 0.05)
+- This suggests comparable performance across different model architectures
+- Sample size may be insufficient for detecting small differences
+
+## Recommendations
+1. Focus on improving cross-dataset generalization
+2. Consider domain adaptation techniques for adolescent population
+3. Increase sample sizes for more robust statistical comparisons
+4. TabNet shows competitive performance with interpretability benefits

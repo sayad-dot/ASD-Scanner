@@ -1,0 +1,5 @@
+Model,Mean AUC,Std AUC,Min AUC,Max AUC,Count
+random_forest,0.5979,0.294,0.2183,1.0,9
+svm,0.6181,0.2353,0.3312,1.0,9
+tabnet,0.5761,0.1022,0.4623,0.7249,9
+xgboost,0.6294,0.2437,0.3457,1.0,9

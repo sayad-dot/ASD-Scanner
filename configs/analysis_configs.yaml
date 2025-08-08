@@ -1,0 +1,8 @@
+performance:
+  models: ['tabnet','random_forest','xgboost','svm']
+  dataset_pairs: ['adult_adult','adult_child','child_adult','child_child','adult_adolescent','adolescent_adult','adolescent_child','child_adolescent','adolescent_adolescent']
+statistics:
+  metric: 'auc'
+interpretability:
+  model: 'tabnet'
+  datasets: ['adult','adolescent','child']

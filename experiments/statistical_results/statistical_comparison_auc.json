@@ -1,0 +1,137 @@
+{
+  "metric": "auc",
+  "pairwise_comparisons": [
+    {
+      "model1": "tabnet",
+      "model2": "random_forest",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 21.0,
+      "p_value": 0.91015625,
+      "significant": "False",
+      "effect_size": -0.09915210355626211,
+      "mean_diff": -0.021824444668297027,
+      "model1_mean": 0.5760538617295823,
+      "model2_mean": 0.5978783063978793,
+      "model1_std": 0.09637694948843288,
+      "model2_std": 0.2772049552360083
+    },
+    {
+      "model1": "tabnet",
+      "model2": "xgboost",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 17.0,
+      "p_value": 0.5703125,
+      "significant": "False",
+      "effect_size": -0.2856221067650014,
+      "mean_diff": -0.05337151063708678,
+      "model1_mean": 0.5760538617295823,
+      "model2_mean": 0.6294253723666691,
+      "model1_std": 0.09637694948843288,
+      "model2_std": 0.22975187934060196
+    },
+    {
+      "model1": "tabnet",
+      "model2": "svm",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 13.0,
+      "p_value": 0.30078125,
+      "significant": "False",
+      "effect_size": -0.23197942087450638,
+      "mean_diff": -0.042086186852318797,
+      "model1_mean": 0.5760538617295823,
+      "model2_mean": 0.6181400485819011,
+      "model1_std": 0.09637694948843288,
+      "model2_std": 0.22186753685597124
+    },
+    {
+      "model1": "random_forest",
+      "model2": "xgboost",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 12.0,
+      "p_value": 0.4609375,
+      "significant": "False",
+      "effect_size": -0.11682813411014348,
+      "mean_diff": -0.031547065968789756,
+      "model1_mean": 0.5978783063978793,
+      "model2_mean": 0.6294253723666691,
+      "model1_std": 0.2772049552360083,
+      "model2_std": 0.22975187934060196
+    },
+    {
+      "model1": "random_forest",
+      "model2": "svm",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 11.0,
+      "p_value": 0.3828125,
+      "significant": "False",
+      "effect_size": -0.07608752366728913,
+      "mean_diff": -0.02026174218402177,
+      "model1_mean": 0.5978783063978793,
+      "model2_mean": 0.6181400485819011,
+      "model1_std": 0.2772049552360083,
+      "model2_std": 0.22186753685597124
+    },
+    {
+      "model1": "xgboost",
+      "model2": "svm",
+      "metric": "auc",
+      "test": "wilcoxon",
+      "statistic": 13.0,
+      "p_value": 0.546875,
+      "significant": "False",
+      "effect_size": 0.04711172229520234,
+      "mean_diff": 0.011285323784767987,
+      "model1_mean": 0.6294253723666691,
+      "model2_mean": 0.6181400485819011,
+      "model1_std": 0.22975187934060196,
+      "model2_std": 0.22186753685597124
+    }
+  ],
+  "overall_test": {
+    "test": "friedman",
+    "statistic": 2.0232558139534924,
+    "p_value": 0.5675939312746447,
+    "significant": "False",
+    "interpretation": "No significant differences detected"
+  },
+  "summary_statistics": {
+    "tabnet": {
+      "mean": 0.5760538617295823,
+      "std": 0.09637694948843288,
+      "min": 0.4623262137625543,
+      "max": 0.7249373173720426,
+      "median": 0.527038287794395,
+      "count": 9
+    },
+    "random_forest": {
+      "mean": 0.5978783063978793,
+      "std": 0.2772049552360083,
+      "min": 0.2183169564121945,
+      "max": 1.0,
+      "median": 0.4752203850708302,
+      "count": 9
+    },
+    "xgboost": {
+      "mean": 0.6294253723666691,
+      "std": 0.22975187934060196,
+      "min": 0.34567901234567905,
+      "max": 1.0,
+      "median": 0.5717032708078047,
+      "count": 9
+    },
+    "svm": {
+      "mean": 0.6181400485819011,
+      "std": 0.22186753685597124,
+      "min": 0.3311917359536407,
+      "max": 1.0,
+      "median": 0.5034013605442177,
+      "count": 9
+    }
+  },
+  "significance_level": 0.05
+}
