@@ -1,0 +1,52 @@
+# Cross-Dataset Validation Configuration
+
+cross_validation:
+  datasets: ['adult', 'adolescent', 'child']
+  models: ['tabnet', 'random_forest', 'xgboost', 'svm']
+  
+  # Metrics to calculate
+  metrics:
+    - 'accuracy'
+    - 'precision'
+    - 'recall'
+    - 'f1'
+    - 'auc'
+    - 'specificity'
+    - 'balanced_accuracy'
+
+# Statistical Testing Configuration
+statistical_tests:
+  significance_level: 0.05
+  tests:
+    - 'wilcoxon'        # Paired samples
+    - 'mannwhitney'     # Independent samples  
+    - 'friedman'        # Multiple related samples
+  
+  # Multiple comparison correction
+  correction_method: 'bonferroni'
+
+# Visualization Configuration
+visualization:
+  figure_format: 'png'
+  dpi: 300
+  style: 'seaborn-v0_8'
+  color_palette: 'husl'
+  
+  # Plots to generate
+  plots:
+    - 'performance_matrices'
+    - 'cross_dataset_comparison' 
+    - 'roc_curves'
+    - 'confusion_matrices'
+    - 'statistical_significance'
+
+# Output Configuration
+output:
+  base_dir: 'experiments'
+  subdirs:
+    cross_validation: 'cross_validation'
+    statistical_results: 'statistical_results'
+    performance_matrices: 'performance_matrices'
+  
+  save_formats: ['json', 'csv']
+  compress_results: false
