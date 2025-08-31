@@ -174,18 +174,6 @@ We welcome contributions! Please feel free to submit a Pull Request. For major c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@article{asd_scanner_2025,
-  title={Cross-Dataset ASD Detection Using TabNet: Feature Harmonization Approach},
-  author={Sayad et al.},
-  journal={Under Review},
-  year={2025}
-}
-```
 
 ## 📜 License
 
