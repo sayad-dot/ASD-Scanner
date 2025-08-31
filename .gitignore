@@ -48,3 +48,7 @@ Thumbs.db
 # Results
 results/temp/
 *.log
+
+# Ignore raw data files
+*.arff
+*.docx
